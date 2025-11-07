@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Why Us — Straat Africa</title>
+  <meta name="description" content="Why choose Straat Africa." />
+  <link rel="icon" href="/favicon.ico" />
+
+  <link rel="preload" href="assets/Montserrat-Black.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Montserrat-Bold.ttf"  as="font" type="font/ttf" crossorigin>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { yellow: '#F9CD46', black: '#0b0b0b', gray: '#121212' } },
+          fontFamily: { mont: ['"MontserratVar"','Montserrat','ui-sans-serif','system-ui'] },
+          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.25)' },
+          maxWidth: { content: '1600px' }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo.png" alt="Straat Africa" class="h-16 md:h-24 w-auto" />
+      </a>
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-white/20">
+        <span class="sr-only">Toggle navigation</span>☰
+      </button>
+      <nav id="navMenu" class="hidden md:flex gap-7 text-xs tracking-widest font-extrabold uppercase">
+        <a class="transition hover:text-brand-yellow" href="index.html">Home</a>
+        <a class="transition hover:text-brand-yellow" href="about.html">About Us</a>
+        <a class="transition text-brand-yellow" href="why-us.html">Why Us</a>
+        <a class="transition hover:text-brand-yellow" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative">
+      <img src="assets/img/why.jpg" alt="Why Us hero" class="w-full h-[60vh] md:h-[72vh] lg:h-[78vh] object-cover" />
+      <div class="absolute inset-0 bg-black/30"></div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="max-w-content mx-auto px-3 sm:px-6 pt-10 md:pt-12 pb-8">
+      <h1 class="text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95]">WHY US</h1>
+
+      <div class="mt-4 grid md:grid-cols-3 gap-8 text-white/85 md:text-base">
+        <div>
+          <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Why choose Straat Africa</p>
+          <p class="mt-2">At Straat Africa, we understand that real connection doesn’t happen behind a screen or on a billboard in isolation. It happens out there — on the move, in taxis, in transit, and in the everyday rhythm of South Africa’s cities and townships.</p>
+        </div>
+        <div>
+          <p>We turn this daily movement into opportunity — transforming transit and public spaces into meaningful media platforms that brands can trust for reach, relevance, and results.</p>
+        </div>
+        <div>
+          <p>With our data-driven approach, creative strategy, and deep understanding of urban culture, Straat Africa gives your brand more than exposure — it gives it presence.</p>
+          <p class="mt-2 text-brand-yellow text-xs font-extrabold uppercase tracking-widest">That’s the power of Media in Motion.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-content mx-auto px-3 sm:px-6"><div class="border-t border-white/10"></div></div>
+
+    <!-- UNMATCHED REACH -->
+    <section class="max-w-content mx-auto px-3 sm:px-6 py-10 md:py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold">UNMATCHED REACH</h2>
+          <p class="mt-2 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">63% of South Africa’s working class relies on taxis</p>
+          <p class="mt-3 text-white/85 md:text-base">That’s over 9 million daily passengers. Our in-taxi screens give your brand a direct line to this powerful audience.</p>
+        </div>
+        <figure class="overflow-hidden">
+          <img src="assets/img/why1.jpg" alt="Unmatched reach" class="w-full h-auto object-cover rounded-lg" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- STREET-LEVEL RELEVANCE -->
+    <section class="max-w-content mx-auto px-3 sm:px-6 py-10 md:py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <figure class="order-2 md:order-1 overflow-hidden">
+          <img src="assets/img/why2.jpg" alt="Street-level relevance" class="w-full h-auto object-cover rounded-lg" />
+        </figure>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl md:text-4xl font-extrabold">STREET-LEVEL RELEVANCE</h2>
+          <p class="mt-2 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">We operate in the spaces where real life unfolds</p>
+          <p class="mt-3 text-white/85 md:text-base">We connect your brand to people through culture, conversation, and movement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MULTI-PLATFORM IMPACT (fix tall image by locking container height) -->
+    <section class="max-w-content mx-auto px-3 sm:px-6 py-10 md:py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-extrabold">MULTI-PLATFORM IMPACT</h2>
+          <p class="mt-3 text-white/85 md:text-base">From Taxi TV and Transit Media to Digital Out-of-Home, Brand Activations, and Community Engagement — we integrate creativity with strategy to make every impression count.</p>
+        </div>
+        <figure class="overflow-hidden rounded-lg h-[38vh] md:h-[46vh] lg:h-[52vh]">
+          <img src="assets/img/why3.jpg" alt="Multi-platform impact" class="w-full h-full object-cover object-center" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- SMART TARGETING -->
+    <section class="max-w-content mx-auto px-3 sm:px-6 py-10 md:py-12">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <figure class="order-2 md:order-1 overflow-hidden">
+          <img src="assets/img/why4.jpg" alt="Smart targeting & data insight" class="w-full h-auto object-cover rounded-lg" />
+        </figure>
+        <div class="order-1 md:order-2">
+          <h2 class="text-3xl md:text-4xl font-extrabold">SMART TARGETING &amp; DATA INSIGHT</h2>
+          <p class="mt-3 text-white/85 md:text-base">With location-based technology and audience analytics (powered by partners like Moving Walls and Sebenza WiFi), we make sure your brand appears in the right place, at the right time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROUDLY + PARALLAX -->
+    <section class="text-center px-4 sm:px-6 py-16 md:py-20 bg-brand-black">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+        PROUDLY AFRICAN.<br/>PROUDLY LOCAL.
+      </h2>
+      <p class="mt-3 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">
+        WE'RE BORN OF THE STREETS WE ADVERTISE IN
+      </p>
+      <p class="mt-3 text-white/85 md:text-base max-w-2xl mx-auto">
+        We're young, creative South Africans who understand the culture, the commute, and the consumer.
+      </p>
+    </section>
+
+    <section class="parallax-cta asphalt">
+      <div class="parallax-overlay"></div>
+      <div class="max-w-content mx-auto px-4 sm:px-6 relative z-[2] text-center flex flex-col items-center justify-center" style="min-height: 72vh;">
+        <div class="flex items-center justify-center gap-4 sm:gap-5">
+          <a class="social-pill" href="https://www.instagram.com/straatafrica?igsh=MXZjb3l3MTM5eWg4cA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a class="social-pill" href="https://www.linkedin.com/company/straat-africa/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="social-pill" href="https://www.facebook.com/share/1AGY8H21wd/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a class="social-pill" href="https://x.com/StraatAfrica?t=LICMg9hbkpXBf-_WLgOWfg&s=09" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+        <p class="mt-8 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wide">www.straatafrica.com</p>
+        <p class="mt-2 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">heita@straatafrica.com</p>
+      </div>
+      <div class="h-1 bg-brand-yellow w-full"></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="bg-brand-gray border-t border-white/10">
+    <div class="max-w-content mx-auto px-3 sm:px-6 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">Links</h4>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li><a class="hover:text-brand-yellow" href="index.html#what-we-do">What We Do</a></li>
+          <li><a class="hover:text-brand-yellow" href="index.html#clients">Clients</a></li>
+          <li><a class="hover:text-brand-yellow" href="index.html#partners">Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">Company</h4>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li><a class="hover:text-brand-yellow" href="about.html">About Us</a></li>
+          <li><a class="hover:text-brand-yellow" href="why-us.html">Why Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">Contact</h4>
+        <ul class="mt-3 space-y-2 text-white/80">
+          <li>heita@straatafrica.com</li>
+          <li>www.straatafrica.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs text-white/50 py-6 border-t border-white/10">©2025 Straat Africa. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    const t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
+    if(t&&m) t.addEventListener('click',()=>m.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

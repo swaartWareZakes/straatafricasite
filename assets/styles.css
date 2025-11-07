@@ -1,0 +1,96 @@
+/* === Montserrat variable (local uploads) === */
+@font-face{
+  font-family: "MontserratVar";
+  src: url("./Montserrat-Black.ttf") format("truetype");
+  font-weight: 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "MontserratVar";
+  src: url("./Montserrat-Bold.ttf") format("truetype");
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Global font helper */
+.font-mont{ font-family: "MontserratVar", Montserrat, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+
+html, body{ height: 100%; }
+a{ text-underline-offset: 2px; }
+
+/* === FULLSCREEN HERO (street bg + stripes + centered logo) === */
+.hero{
+  position: relative;
+  height: 100vh;
+  min-height: 560px;
+  background-image: url('img/bg.jpg');  /* asphalt */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Variant helpers if needed elsewhere */
+.hero--about { background-image: url('img/about.jpg'); }
+.hero--why   { background-image: url('img/why.jpg'); }
+
+/* Left stripes (construction vibe) */
+.hero-stripes{
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 110px;
+  pointer-events: none;
+}
+.stripe{
+  position: absolute;
+  left: 18px;
+  width: 60px;
+  height: 180px;
+  background-image: url('img/strip_texture.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
+}
+.stripe-1{ top: 12%; }
+.stripe-2{ bottom: 12%; }
+@media (max-width: 768px){
+  .hero-stripes{ width: 80px; }
+  .stripe{ left: 12px; width: 40px; height: 120px; }
+}
+
+/* === Parallax CTA (asphalt) — used on index, about, why, contact === */
+.parallax-cta{
+  position: relative;
+  background-attachment: fixed; /* desktop parallax */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.parallax-cta.asphalt{
+  background-image: url('img/bg.jpg'); /* same asphalt as hero */
+}
+.parallax-cta .parallax-overlay{
+  position: absolute; inset: 0; background: rgba(0,0,0,.40);
+}
+
+/* Social icon pills (yellow squares) */
+.social-pill{
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  background: #F9CD46; color: #000;
+  border-radius: 10px; font-size: 1.25rem;
+  font-weight: 800; transition: transform .18s ease;
+}
+.social-pill:hover{ transform: scale(1.06); }
+@media (min-width: 768px){
+  .social-pill{ width: 52px; height: 52px; font-size: 1.35rem; }
+}
+
+/* iOS / Safari fallback: ignore fixed attachment */
+@supports (-webkit-touch-callout: none) {
+  .parallax-cta{ background-attachment: scroll; }
+}
+
+/* Ensure overall body font as final fallback */
+body{ font-family: "MontserratVar", Montserrat, ui-sans-serif, system-ui; }
