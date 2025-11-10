@@ -1,4 +1,4 @@
-/* === Montserrat variable (local uploads) === */
+/* === Montserrat (uploaded) === */
 @font-face{
   font-family: "MontserratVar";
   src: url("./Montserrat-Black.ttf") format("truetype");
@@ -14,83 +14,159 @@
   font-display: swap;
 }
 
-/* Global font helper */
-.font-mont{ font-family: "MontserratVar", Montserrat, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+/* === Base === */
+:root{
+  --brand-yellow:#F9CD46;
+  --brand-black:#0b0b0b;
+  --brand-gray:#121212;
+}
+html,body{height:100%;}
+body{
+  font-family:"MontserratVar", Montserrat, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--brand-black);
+  color:#fff;
+  text-underline-offset: 2px;
 
-html, body{ height: 100%; }
-a{ text-underline-offset: 2px; }
+  /* Page enter animation */
+  opacity:0;
+  transform: translateY(8px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+body.is-loaded{
+  opacity:1;
+  transform:none;
+}
 
-/* === FULLSCREEN HERO (street bg + stripes + centered logo) === */
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  body{ transition: none !important; }
+  .reveal,[data-animate]{ transition: none !important; opacity:1 !important; transform:none !important; }
+}
+
+/* === FULLSCREEN HERO === */
 .hero{
   position: relative;
-  height: 100vh;
-  min-height: 560px;
-  background-image: url('img/bg.jpg');  /* asphalt */
+  /* shorter hero */
+  height: 78vh;
+  min-height: 460px;
+  max-height: 720px;
+  background-image: url('img/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Variant helpers if needed elsewhere */
-.hero--about { background-image: url('img/about.jpg'); }
-.hero--why   { background-image: url('img/why.jpg'); }
+@media (max-width: 768px){
+  .hero{
+    height: 68vh;
+    min-height: 420px;
+  }
+}
 
-/* Left stripes (construction vibe) */
+/* Optional variants */
+.hero--about{ background-image: url('img/about.jpg'); }
+.hero--why{ background-image: url('img/why.jpg'); }
+
+/* === LEFT STRIPES === */
 .hero-stripes{
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 110px;
-  pointer-events: none;
+  position:absolute; inset:0 auto 0 0; width:110px; pointer-events:none;
 }
 .stripe{
-  position: absolute;
-  left: 18px;
-  width: 60px;
-  height: 180px;
-  background-image: url('img/strip_texture.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  position:absolute; left:18px; width:60px; height:180px;
+  background-image:url('img/strip_texture.png');
+  background-size:cover; background-repeat:no-repeat;
   filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
 }
-.stripe-1{ top: 12%; }
-.stripe-2{ bottom: 12%; }
-@media (max-width: 768px){
-  .hero-stripes{ width: 80px; }
-  .stripe{ left: 12px; width: 40px; height: 120px; }
+.stripe-1{ top:12%; }
+.stripe-2{ bottom:12%; }
+@media (max-width:768px){
+  .hero-stripes{ width:80px; }
+  .stripe{ left:12px; width:40px; height:120px; }
 }
 
-/* === Parallax CTA (asphalt) — used on index, about, why, contact === */
+/* === Parallax CTA (asphalt) — used on index/why/contact === */
 .parallax-cta{
-  position: relative;
-  background-attachment: fixed; /* desktop parallax */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position:relative;
+  background-image:url('img/bg.jpg'); /* asphalt texture */
+  background-size:cover; background-position:center;
+  background-attachment: fixed;
 }
-.parallax-cta.asphalt{
-  background-image: url('img/bg.jpg'); /* same asphalt as hero */
-}
-.parallax-cta .parallax-overlay{
-  position: absolute; inset: 0; background: rgba(0,0,0,.40);
-}
-
-/* Social icon pills (yellow squares) */
-.social-pill{
-  width: 48px; height: 48px;
-  display: grid; place-items: center;
-  background: #F9CD46; color: #000;
-  border-radius: 10px; font-size: 1.25rem;
-  font-weight: 800; transition: transform .18s ease;
-}
-.social-pill:hover{ transform: scale(1.06); }
-@media (min-width: 768px){
-  .social-pill{ width: 52px; height: 52px; font-size: 1.35rem; }
-}
-
-/* iOS / Safari fallback: ignore fixed attachment */
+.parallax-cta .parallax-overlay{ position:absolute; inset:0; background:rgba(0,0,0,.40); }
+/* iOS fallback */
 @supports (-webkit-touch-callout: none) {
   .parallax-cta{ background-attachment: scroll; }
 }
 
-/* Ensure overall body font as final fallback */
-body{ font-family: "MontserratVar", Montserrat, ui-sans-serif, system-ui; }
+/* Social pill buttons (yellow squares) */
+.social-pill{
+  width:48px; height:48px; display:grid; place-items:center;
+  background:var(--brand-yellow); color:#000;
+  border-radius:10px; font-weight:800; font-size:1.25rem;
+  transition: transform .18s ease, filter .18s ease;
+}
+.social-pill:hover{ transform:scale(1.06); filter:brightness(.98); }
+@media (min-width:768px){
+  .social-pill{ width:52px; height:52px; font-size:1.35rem; }
+}
+
+/* === REVEAL ON SCROLL ANIMATIONS === */
+[data-animate]{
+  opacity:0;
+  transform: translateY(14px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+[data-animate].in{
+  opacity:1;
+  transform:none;
+}
+[data-animate="fade"]{ transform:none; }
+[data-animate="fade-up"]{ transform: translateY(14px); }
+[data-animate="fade-left"]{ transform: translateX(14px); }
+[data-animate="fade-right"]{ transform: translateX(-14px); }
+
+/* === Loader (preloader) === */
+#preloader{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--brand-black);
+  transition: opacity .6s ease, visibility .6s ease;
+}
+#preloader.hidden{ opacity:0; visibility:hidden; }
+
+/* Spinner + wordmark lockup */
+.loader-wrap{ display:flex; flex-direction:column; align-items:center; gap:18px; }
+.loader-ring{
+  width:64px; height:64px; border-radius:50%;
+  border:5px solid rgba(249,205,70,.25);
+  border-top-color:var(--brand-yellow);
+  animation: spin 1s linear infinite;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,.35));
+}
+.loader-word{
+  letter-spacing:.35em; text-indent:.35em;
+  font-weight:900; font-size:.8rem; opacity:.85;
+}
+@keyframes spin{ to{ transform: rotate(360deg); } }
+
+
+/* === Remove all white borders globally === */
+*,
+*:before,
+*:after {
+  border-color: transparent !important;
+}
+
+/* Optional: remove light section dividers only */
+.border,
+.border-white,
+.border-white\/10,
+.border-white\/20 {
+  border: none !important;
+}
+
+/* If you still want section dividers to show subtly, use this instead: */
+/*
+.border-white\/10 {
+  border-color: rgba(255,255,255,0.03) !important;
+}
+*/

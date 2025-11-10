@@ -36,6 +36,14 @@
 </head>
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-wrap">
+      <div class="loader-ring"></div>
+      <div class="loader-word">LOADING</div>
+    </div>
+  </div>
+
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
@@ -57,7 +65,7 @@
   </header>
 
   <main>
-    <!-- FULLSCREEN HERO -->
+    <!-- HERO -->
     <section class="hero relative">
       <div class="absolute inset-0 bg-black/55 pointer-events-none"></div>
 
@@ -75,77 +83,120 @@
     </section>
 
     <!-- HEITA DAAR -->
-    <section class="max-w-content mx-auto px-3 sm:px-6 py-14 sm:py-16">
+    <section class="max-w-content mx-auto px-3 sm:px-6 py-14 sm:py-16" data-animate="fade-up">
       <h1 class="text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95]">
         HE<span class="text-brand-yellow">I</span>TA&nbsp;DAAR
       </h1>
       <div class="mt-6 md:mt-8 text-white/90 space-y-5 md:text-lg">
         <p class="font-extrabold text-brand-yellow">WE BRING MEDIA TO THE STREETS.</p>
-        <p>At Straat Africa, we transform everyday taxis into powerful, moving media platforms that connect brands to millions of South Africans — in motion, every day. Our screens live where life happens: on the road, in conversation, in the heartbeat of our cities and townships.</p>
-        <p>We believe the streets aren’t just spaces people pass through. They’re where stories travel, culture spreads, and brands become part of the journey. That’s why we call it Media in Motion — because we don’t just move messages, we move with the people.</p>
+        <p>
+          At Straat Africa, we transform everyday taxis into powerful, moving media platforms that connect brands to
+          millions of South Africans — in motion, every day. Our screens live where life happens: on the road, in
+          conversation, in the heartbeat of our cities and townships.
+        </p>
+        <p>
+          We believe the streets aren’t just spaces people pass through. They’re where stories travel, culture spreads,
+          and brands become part of the journey. That’s why we call it Media in Motion — because we don’t just move
+          messages, we move with the people.
+        </p>
       </div>
     </section>
 
-    <!-- WIDE GRID: WHAT WE DO -->
-    <section id="what-we-do" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-10 md:py-14">
+    <!-- WHAT WE DO -->
+    <section id="what-we-do" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-10 md:py-14" data-animate="fade-up">
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white/5">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl shadow-soft bg-white/5" data-animate="fade-right">
           <img src="assets/img/what.jpg" alt="What We Do" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
-        <div class="md:col-span-5">
+        <div class="md:col-span-5" data-animate="fade-left">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">WHAT WE DO</h2>
-          <p class="mt-4 text-white/80 text-base md:text-lg">We create powerful connections with real audiences through movement media. From the streets to screens, from townships to transit, our network delivers unmatched reach and measurable results.</p>
-          <ul class="mt-6 grid gap-2 md:gap-3 text-white/85 text-sm md:text-base list-disc pl-5">
-            <li>In-Taxi TV & Transit Screens</li>
-            <li>Digital Out-of-Home</li>
-            <li>Brand Activations & Community Engagement</li>
-            <li>Urban Media & Street-Level Impact</li>
-          </ul>
+          <div class="mt-4 text-white/80 text-base md:text-lg space-y-4">
+            <p>
+              We specialise in connecting brands to real audiences through movement, culture, and innovation. From the
+              streets to the screens, every service we offer is built to meet people where they are — in motion.
+            </p>
+            <p>
+              Our work spans Taxi TV Advertising, Transit Media, and Digital Out-Of-Home, supported by smart
+              Location-Based Targeting that ensures every message hits the right place at the right time.
+            </p>
+            <p>
+              Our team also drives Brand Activations, Creative Strategy, and Community Engagement, turning every
+              touchpoint into an experience that moves both people and brands forward.
+            </p>
+            <p>
+              Because in the world of Straat Africa, movement isn’t just what we do. It’s what we believe in.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- WIDE GRID: WHAT THEY SAY -->
-    <section class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-14">
+    <!-- WHAT THEY SAY -->
+    <section class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-14" data-animate="fade-up">
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
-        <div class="md:col-span-5">
+        <div class="md:col-span-5" data-animate="fade-right">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">WHAT THEY SAY</h2>
-          <p class="mt-4 text-white/80 text-base md:text-lg">“Real reach, real people, real impact.” — Brand Manager, Retail</p>
+          <p class="mt-4 text-white/80 text-base md:text-lg">
+            “Real reach, real people, real impact.” — Brand Manager, Retail
+          </p>
         </div>
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white/5">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl shadow-soft bg-white/5" data-animate="fade-left">
           <img src="assets/img/they.jpg" alt="Testimonial image" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
       </div>
     </section>
 
-    <!-- WIDE GRID: CLIENTS -->
-    <section id="clients" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-14">
+    <!-- OUR CLIENTS -->
+    <section id="clients" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-14" data-animate="fade-up">
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl shadow-soft bg-white" data-animate="fade-right">
           <img src="assets/img/Clients.png" alt="Clients" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
-        <div class="md:col-span-5">
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">OUR CLIENTS</h2>
-          <p class="mt-4 text-white/80 text-base md:text-lg">We collaborate with leading brands who partner with us for authentic, measurable connection to working-class South Africans.</p>
+        <div class="md:col-span-5" data-animate="fade-left">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            OUR CL<span class="text-brand-yellow">I</span>ENTS
+          </h2>
+          <div class="mt-4 text-white/80 text-base md:text-lg space-y-4">
+            <p>
+              From household names to homegrown heroes, we’ve partnered with brands that believe in the power of the street.
+            </p>
+            <p>
+              Each campaign we run is more than media placement — it’s a chance to connect with real people in motion,
+              across the cities and townships that shape South African life.
+            </p>
+            <p>
+              Whether it’s food, fashion, entertainment, or social impact, our clients trust Straat Africa to take their
+              message where it matters most — to the people, on the move, every day.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- WIDE GRID: PARTNERS -->
-    <section id="partners" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-16">
+    <!-- OUR PARTNERS -->
+    <section id="partners" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-16" data-animate="fade-up">
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
-        <div class="md:col-span-5">
+        <div class="md:col-span-5" data-animate="fade-right">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">OUR PARTNERS</h2>
-          <p class="mt-4 text-white/80 text-base md:text-lg">From data to Wi-Fi to analytics, our partners help us deliver smart targeting and real-time insight, ensuring every message moves with purpose.</p>
+          <div class="mt-4 text-white/80 text-base md:text-lg space-y-4">
+            <p>
+              Partnership is at the heart of how we move. Together with innovative partners like Moving Walls and Sebenza WiFi,
+              we’re building smarter, more connected ways to deliver media across South Africa.
+            </p>
+            <p>
+              From advanced data and analytics to real-time digital connectivity, our partners help us keep Straat Africa at
+              the forefront of street-level media — ensuring every message moves with purpose, precision, and impact.
+            </p>
+          </div>
         </div>
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl shadow-soft bg-white" data-animate="fade-left">
           <img src="assets/img/PARTNERS.png" alt="Partners" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
       </div>
     </section>
 
     <!-- BIG PARALLAX SOCIAL -->
-    <section class="parallax-cta asphalt">
+    <section class="parallax-cta asphalt" data-animate="fade">
       <div class="parallax-overlay"></div>
       <div class="max-w-content mx-auto px-4 sm:px-6 relative z-[2] text-center flex flex-col items-center justify-center" style="min-height: 72vh;">
         <div class="flex items-center justify-center gap-3 sm:gap-4">
@@ -190,9 +241,9 @@
     <div class="text-center text-xs text-white/50 py-6 border-t border-white/10">©2025 Straat Africa. All Rights Reserved.</div>
   </footer>
 
-  <script>
-    const t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
-    if(t&&m) t.addEventListener('click',()=>m.classList.toggle('hidden'));
-  </script>
+  <!-- Core JS (nav, loader, animations, smooth scroll) -->
+  <script src="assets/main.js"></script>
+  <!-- Extra safety: if JS somehow fails, reveal page after 1s -->
+  <script>setTimeout(()=>document.body.classList.add('is-loaded'),1000);</script>
 </body>
 </html>
