@@ -29,12 +29,12 @@
 </head>
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b 10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.png" alt="Straat Africa" class="h-16 md:h-24 w-auto" />
       </a>
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-white/20">
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border 20">
         <span class="sr-only">Toggle navigation</span>☰
       </button>
       <nav id="navMenu" class="hidden md:flex gap-7 text-xs tracking-widest font-extrabold uppercase">
@@ -88,38 +88,38 @@
           </div>
 
           <!-- Map image (replace if you like) -->
-          <figure class="mt-10 rounded-lg overflow-hidden border border-white/10 bg-white/5">
+          <figure class="mt-10 rounded-lg overflow-hidden border 10 bg-white/5">
             <img src="assets/img/map.png" alt="Map" class="w-full h-56 object-cover">
           </figure>
         </div>
 
         <!-- Form -->
-        <div class="bg-white/5 border border-white/10 rounded-xl p-5 sm:p-6 md:p-8 shadow-soft">
+        <div class="bg-white/5 border 10 rounded-xl p-5 sm:p-6 md:p-8 shadow-soft">
           <form id="contactForm" class="grid gap-5">
             <div>
               <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Full Name</label>
-              <input type="text" name="name" required class="w-full rounded-lg bg-black/40 border border-white/15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Your name">
+              <input type="text" name="name" required class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Your name">
             </div>
 
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Email</label>
-                <input type="email" name="email" required class="w-full rounded-lg bg-black/40 border border-white/15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="you@example.com">
+                <input type="email" name="email" required class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="you@example.com">
               </div>
               <div>
                 <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Phone</label>
-                <input type="tel" name="phone" class="w-full rounded-lg bg-black/40 border border-white/15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="+27 …">
+                <input type="tel" name="phone" class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="+27 …">
               </div>
             </div>
 
             <div>
               <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Subject</label>
-              <input type="text" name="subject" class="w-full rounded-lg bg-black/40 border border-white/15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Campaign brief / Partnership / Other">
+              <input type="text" name="subject" class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Campaign brief / Partnership / Other">
             </div>
 
             <div>
               <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Message</label>
-              <textarea name="message" rows="6" required class="w-full rounded-lg bg-black/40 border border-white/15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Tell us about your project…"></textarea>
+              <textarea name="message" rows="6" required class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Tell us about your project…"></textarea>
             </div>
 
             <button type="submit" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-extrabold uppercase tracking-widest bg-brand-yellow text-black hover:brightness-95">
@@ -156,7 +156,7 @@
     </section>
   </main>
 
-  <footer id="contact" class="bg-brand-gray border-t border-white/10">
+  <footer id="contact" class="bg-brand-gray border-t 10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-10 grid md:grid-cols-3 gap-8">
       <div>
         <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">Links</h4>
@@ -181,7 +181,7 @@
         </ul>
       </div>
     </div>
-    <div class="text-center text-xs text-white/50 py-6 border-t border-white/10">©2025 Straat Africa. All Rights Reserved.</div>
+    <div class="text-center text-xs text-white/50 py-6 border-t 10">©2025 Straat Africa. All Rights Reserved.</div>
   </footer>
 
   <script>
@@ -199,5 +199,11 @@
       window.location.href = `mailto:heita@straatafrica.com?subject=${subject}&body=${body}`;
     });
   </script>
+
+
+<!-- ADD THIS: loader + animations -->
+<script src="assets/main.js"></script>
+<!-- Optional fallback: reveal body if main.js can’t load -->
+<script>setTimeout(()=>document.body.classList.add('is-loaded'),1000);</script>
 </body>
 </html>

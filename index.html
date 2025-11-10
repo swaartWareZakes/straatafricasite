@@ -37,13 +37,21 @@
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+   <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-wrap">
+      <div class="loader-ring"></div>
+      <div class="loader-word">LOADING</div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b 10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.png" alt="Straat Africa" class="h-16 md:h-24 w-auto" />
       </a>
 
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-white/20">
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border 20">
         <span class="sr-only">Toggle navigation</span>☰
       </button>
 
@@ -89,7 +97,7 @@
     <!-- WIDE GRID: WHAT WE DO -->
     <section id="what-we-do" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-10 md:py-14">
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white/5">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl border 10 shadow-soft bg-white/5">
           <img src="assets/img/what.jpg" alt="What We Do" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
         <div class="md:col-span-5">
@@ -110,9 +118,12 @@
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
         <div class="md:col-span-5">
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">WHAT THEY SAY</h2>
-          <p class="mt-4 text-white/80 text-base md:text-lg">“Real reach, real people, real impact.” — Brand Manager, Retail</p>
+          <p class="mt-4 text-white/80 text-base md:text-lg">
+            “Straat Africa helped us launch our product straight into the heart of the township. Real reach, real impact — we saw results within days.”
+            <br><span class="text-white/60">— Lebo Mokoena, Brand Manager: Kasikicks</span>
+          </p>
         </div>
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white/5">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl border 10 shadow-soft bg-white/5">
           <img src="assets/img/they.jpg" alt="Testimonial image" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
       </div>
@@ -121,7 +132,7 @@
     <!-- WIDE GRID: CLIENTS -->
     <section id="clients" class="max-w-content mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-14">
       <div class="grid md:grid-cols-12 gap-4 md:gap-6 items-center">
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl border 10 shadow-soft bg-white">
           <img src="assets/img/Clients.png" alt="Clients" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
         <div class="md:col-span-5">
@@ -138,7 +149,7 @@
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">OUR PARTNERS</h2>
           <p class="mt-4 text-white/80 text-base md:text-lg">From data to Wi-Fi to analytics, our partners help us deliver smart targeting and real-time insight, ensuring every message moves with purpose.</p>
         </div>
-        <figure class="md:col-span-7 overflow-hidden rounded-xl border border-white/10 shadow-soft bg-white">
+        <figure class="md:col-span-7 overflow-hidden rounded-xl border 10 shadow-soft bg-white">
           <img src="assets/img/PARTNERS.png" alt="Partners" class="w-full h-full object-cover aspect-video md:aspect-[4/3]" />
         </figure>
       </div>
@@ -162,7 +173,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer id="contact" class="bg-brand-gray border-t border-white/10">
+  <footer id="contact" class="bg-brand-gray border-t 10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-10 grid md:grid-cols-3 gap-8">
       <div>
         <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">Links</h4>
@@ -187,12 +198,18 @@
         </ul>
       </div>
     </div>
-    <div class="text-center text-xs text-white/50 py-6 border-t border-white/10">©2025 Straat Africa. All Rights Reserved.</div>
+    <div class="text-center text-xs text-white/50 py-6 border-t 10">©2025 Straat Africa. All Rights Reserved.</div>
   </footer>
+
 
   <script>
     const t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
     if(t&&m) t.addEventListener('click',()=>m.classList.toggle('hidden'));
   </script>
+
+  <!-- ADD THIS: loader + animations -->
+  <script src="assets/main.js"></script>
+  <!-- Optional fallback: reveal body if main.js can’t load -->
+  <script>setTimeout(()=>document.body.classList.add('is-loaded'),1000);</script>
 </body>
 </html>

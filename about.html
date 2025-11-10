@@ -29,12 +29,12 @@
 </head>
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b 10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.png" alt="Straat Africa" class="h-16 md:h-24 w-auto" />
       </a>
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-white/20">
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border 20">
         <span class="sr-only">Toggle navigation</span>☰
       </button>
       <nav id="navMenu" class="hidden md:flex gap-7 text-xs tracking-widest font-extrabold uppercase">
@@ -79,7 +79,7 @@
       <div class="mt-8 md:mt-10 space-y-10 md:space-y-12">
         <!-- 1 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border border-white/10 bg-white/5">
+          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
             <img src="assets/img/abou1.png" alt="In-Taxi screens" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
@@ -90,7 +90,7 @@
 
         <!-- 2 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border border-white/10 bg-white/5">
+          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
             <img src="assets/img/about2.jpeg" alt="Traditional OOH" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
@@ -101,7 +101,7 @@
 
         <!-- 3 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border border-white/10 bg-white/5">
+          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
             <img src="assets/img/about4.jpeg" alt="Activations" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
@@ -112,7 +112,7 @@
 
         <!-- 4 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
-          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border border-white/10 bg-white/5">
+          <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
             <img src="assets/img/about.jpg" alt="Urban Media" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
@@ -124,7 +124,7 @@
     </section>
 
     <!-- OUR REACH (icons only) -->
-    <section class="bg-brand-gray/60 border-y border-white/10">
+    <section class="bg-brand-gray/60 border-y 10">
       <div class="max-w-content mx-auto px-3 sm:px-6 py-12 md:py-16">
         <h2 class="text-4xl md:text-5xl font-extrabold">OUR REACH</h2>
 
@@ -170,7 +170,7 @@
     </section>
   </main>
 
-  <footer id="contact" class="bg-brand-gray border-t border-white/10">
+  <footer id="contact" class="bg-brand-gray border-t 10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-10 grid md:grid-cols-3 gap-8">
       <div>
         <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">Links</h4>
@@ -195,8 +195,11 @@
         </ul>
       </div>
     </div>
-    <div class="text-center text-xs text-white/50 py-6 border-t border-white/10">©2025 Straat Africa. All Rights Reserved.</div>
+    <div class="text-center text-xs text-white/50 py-6 border-t 10">©2025 Straat Africa. All Rights Reserved.</div>
   </footer>
+
+   <!-- ADD THIS: loader + animations -->
+   <script src="assets/main.js"></script>
 
   <script>
     const t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
