@@ -44,25 +44,34 @@ body.is-loaded{
 }
 
 /* === FULLSCREEN HERO === */
+/* === HERO BANNERS (1080x466-ish on desktop) === */
 .hero{
   position: relative;
-  /* shorter hero */
-  height: 78vh;
-  min-height: 460px;
-  max-height: 720px;
-  background-image: url('img/bg.jpg');
+  width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
+  overflow: hidden;
+
+  /* default for mobile / small screens */
+  height: 60vh;
+  min-height: 380px;
 }
 
-@media (max-width: 768px){
+/* Desktop: lock the hero height to 466px */
+@media (min-width: 1024px){
   .hero{
-    height: 68vh;
-    min-height: 420px;
+    height: 466px;
+    min-height: 466px;
+    max-height: 466px;
   }
 }
 
+/* Per-page hero backgrounds */
+.hero--home   { background-image: url('img/bg.jpg'); }
+.hero--about  { background-image: url('img/abt.jpg'); }
+.hero--why    { background-image: url('img/why.jpg'); }
+.hero--contact{ background-image: url('img/cont.png'); }
 /* Optional variants */
 .hero--about{ background-image: url('img/about.jpg'); }
 .hero--why{ background-image: url('img/why.jpg'); }
