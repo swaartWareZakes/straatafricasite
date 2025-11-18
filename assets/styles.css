@@ -37,6 +37,16 @@ body.is-loaded{
   transform:none;
 }
 
+/* Mobile nav slide-down */
+.mobile-nav {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.mobile-nav.is-open {
+  /* max-height is set inline via JS to match content height */
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   body{ transition: none !important; }

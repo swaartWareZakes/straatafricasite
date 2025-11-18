@@ -5,42 +5,63 @@
    (function () {
     'use strict';
   
-    /* ---------- 1) Mobile nav toggle (ES5, works everywhere) ---------- */
+    /* ---------- 1) Mobile nav toggle with smooth panel + ✕ icon ---------- */
     document.addEventListener('DOMContentLoaded', function () {
       var toggle = document.getElementById('navToggle');
-      var menu = document.getElementById('navMenu');
+      var icon   = document.getElementById('navIcon');
+      var menu   = document.getElementById('navMenu');
   
-      if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-          // Tailwind: .hidden = display:none
-          if (menu.classList.contains('hidden')) {
-            menu.classList.remove('hidden');
-          } else {
-            menu.classList.add('hidden');
-          }
-        });
+      if (!toggle || !menu || !icon) return;
+  
+      var open = false;
+  
+      function setNavState(nextOpen) {
+        open = nextOpen;
+  
+        if (open) {
+          // slide down
+          menu.classList.add('is-open');
+          menu.style.maxHeight = menu.scrollHeight + 'px';
+          icon.textContent = '✕';
+          toggle.setAttribute('aria-expanded', 'true');
+        } else {
+          // slide up
+          menu.style.maxHeight = '0px';
+          menu.classList.remove('is-open');
+          icon.textContent = '☰';
+          toggle.setAttribute('aria-expanded', 'false');
+        }
       }
+  
+      toggle.addEventListener('click', function () {
+        setNavState(!open);
+      });
+  
+      // If user resizes to desktop, reset menu so it doesn’t get stuck
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 768) {
+          menu.style.maxHeight = '';
+          menu.classList.remove('is-open');
+          icon.textContent = '☰';
+          toggle.setAttribute('aria-expanded', 'false');
+          open = false;
+        }
+      });
     });
   
     /* ---------- 2) Preloader & page enter ---------- */
-    // We hide the loader on window.load, plus a fallback so we never get stuck
     (function () {
-      // Avoid flash of unstyled content if this loads very fast
       document.documentElement.classList.add('js');
   
-      // Safety fallback: if load is delayed (slow image/font), clear after 1.2s
       var safetyTimer = setTimeout(function () {
         hidePreloader();
       }, 1200);
   
       window.addEventListener('load', function () {
         clearTimeout(safetyTimer);
-        // Small delay feels smoother and lets late fonts settle
         setTimeout(function () {
           hidePreloader();
-          // Kick off first-frame reveals for items already in view
           revealObserve();
-          // If we arrived with a hash, smooth jump once content is visible
           smoothScrollToHashOnLoad();
         }, 150);
       });
@@ -48,9 +69,7 @@
       function hidePreloader() {
         document.body.classList.add('is-loaded');
         var pre = document.getElementById('preloader');
-        if (pre) {
-          pre.classList.add('hidden');
-        }
+        if (pre) pre.classList.add('hidden');
       }
     })();
   
@@ -59,7 +78,6 @@
       var els = document.querySelectorAll('[data-animate]');
       if (!els.length) return;
   
-      // If IO unsupported, or user prefers reduced motion → just show everything
       var noIO = !('IntersectionObserver' in window);
       var reduced =
         window.matchMedia &&
@@ -97,21 +115,19 @@
         Array.prototype.forEach.call(links, function (a) {
           a.addEventListener('click', function (e) {
             var href = a.getAttribute('href') || '';
-            if (href === '#') return; // ignore dummy links
+            if (href === '#') return;
   
             var id = href.slice(1);
             var target = document.getElementById(id);
-            if (!target) return; // not on this page
+            if (!target) return;
   
             e.preventDefault();
             try {
               target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } catch (err) {
-              // Older browsers without smooth scroll
               target.scrollIntoView(true);
             }
   
-            // Update URL (no jump)
             if (history && history.pushState) {
               history.pushState(null, '', '#' + id);
             }
@@ -120,7 +136,6 @@
       });
     })();
   
-    /* Smoothly scroll to initial hash after load (so the preloader doesn't block it) */
     window.smoothScrollToHashOnLoad = function () {
       var hash = window.location.hash;
       if (!hash || hash.length < 2) return;

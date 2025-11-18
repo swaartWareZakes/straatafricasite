@@ -29,21 +29,45 @@
 </head>
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
-  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b 10">
+  <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
     <div class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between">
+      <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo.png" alt="Straat Africa" class="h-16 md:h-24 w-auto" />
       </a>
-      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border 20">
-        <span class="sr-only">Toggle navigation</span>☰
+  
+      <!-- Mobile burger / close -->
+      <button
+        id="navToggle"
+        class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-white/20 text-white transition"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <!-- We just swap this text between ☰ and ✕ in JS -->
+        <span id="navIcon" class="text-xl leading-none">☰</span>
       </button>
-      <nav id="navMenu" class="hidden md:flex gap-7 text-xs tracking-widest font-extrabold uppercase">
-        <a class="transition hover:text-brand-yellow" href="index.html">Home</a>
+  
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex gap-7 text-xs tracking-widest font-extrabold uppercase">
+        <a class="transition text-brand-yellow" href="index.html">Home</a>
         <a class="transition hover:text-brand-yellow" href="about.html">About Us</a>
         <a class="transition hover:text-brand-yellow" href="why-us.html">Why Us</a>
-        <a class="transition text-brand-yellow" href="contact.html">Contact</a>
+        <a class="transition hover:text-brand-yellow" href="contact.html">Contact</a>
       </nav>
     </div>
+  
+    <!-- Mobile nav panel -->
+    <nav
+      id="navMenu"
+      class="mobile-nav md:hidden bg-black/95 border-t border-white/10"
+    >
+      <div class="max-w-content mx-auto px-3 sm:px-6 py-4 flex flex-col gap-3 text-sm font-extrabold tracking-widest uppercase">
+        <a class="py-1 hover:text-brand-yellow" href="index.html">Home</a>
+        <a class="py-1 hover:text-brand-yellow" href="about.html">About Us</a>
+        <a class="py-1 hover:text-brand-yellow" href="why-us.html">Why Us</a>
+        <a class="py-1 hover:text-brand-yellow" href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -225,9 +249,6 @@
   </footer>
 
   <script>
-    const t = document.getElementById('navToggle'),
-          m = document.getElementById('navMenu');
-    if (t && m) t.addEventListener('click', () => m.classList.toggle('hidden'));
 
     // mailto handler
     document.getElementById('contactForm')?.addEventListener('submit', function(e){
