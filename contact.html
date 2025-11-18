@@ -47,38 +47,57 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="relative">
-      <img src="assets/img/cont.png" alt="Contact hero" class="w-full h-[48vh] md:h-[60vh] lg:h-[66vh] object-cover" />
-      <div class="absolute inset-0 bg-black/40"></div>
-      <div class="absolute inset-x-0 bottom-6 md:bottom-10 text-center">
-        <h1 class="text-[9vw] sm:text-6xl md:text-7xl font-extrabold leading-[0.95]">CONTACT US</h1>
-        <p class="mt-2 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Let's create Media in Motion together</p>
+    <!-- HERO (image only, title below like ABOUT US) -->
+    <section class="hero hero--contact relative">
+      <div class="hero-stripes">
+        <span class="stripe stripe-1"></span>
+        <span class="stripe stripe-2"></span>
       </div>
+      <div class="absolute inset-0 bg-black/25"></div>
+    </section>
+
+    <!-- TITLE + SUBTITLE BELOW HERO -->
+    <section class="max-w-content mx-auto px-3 sm:px-6 pt-10 md:pt-12">
+      <h1 class="text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95]">
+        CONTACT US
+      </h1>
+      <p class="mt-3 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">
+        LET'S CREATE MEDIA IN MOTION TOGETHER
+      </p>
     </section>
 
     <!-- CONTENT -->
-    <section class="max-w-content mx-auto px-3 sm:px-6 py-12 md:py-16">
+    <section class="max-w-content mx-auto px-3 sm:px-6 py-10 md:py-16">
       <div class="grid md:grid-cols-2 gap-10 md:gap-14">
         <!-- Info -->
         <div>
           <h2 class="text-3xl md:text-4xl font-extrabold">LET'S TALK</h2>
-          <p class="mt-3 text-white/85 md:text-base max-w-prose">Send us a note about your brief, campaign goals, or partnership ideas. We’ll get back to you fast.</p>
+          <p class="mt-3 text-white/85 md:text-base max-w-prose">
+            Send us a note about your brief, campaign goals, or partnership ideas. We’ll get back to you fast.
+          </p>
 
           <div class="mt-6 space-y-4 text-white/90">
             <div>
               <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Email</p>
-              <a href="mailto:heita@straatafrica.com" class="text-lg md:text-xl font-extrabold hover:text-brand-yellow">heita@straatafrica.com</a>
+              <a href="mailto:heita@straatafrica.com"
+                 class="text-lg md:text-xl font-extrabold hover:text-brand-yellow">
+                heita@straatafrica.com
+              </a>
             </div>
             <div>
               <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Website</p>
-              <a href="https://www.straatafrica.com" target="_blank" class="font-extrabold hover:text-brand-yellow">www.straatafrica.com</a>
+              <a href="https://www.straatafrica.com" target="_blank"
+                 class="font-extrabold hover:text-brand-yellow">
+                www.straatafrica.com
+              </a>
             </div>
           </div>
 
           <!-- Socials -->
           <div class="mt-8">
-            <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow mb-3">Social</p>
+            <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow mb-3">
+              Social
+            </p>
             <div class="flex items-center gap-3 sm:gap-4">
               <a class="social-pill" href="https://www.instagram.com/straatafrica?igsh=MXZjb3l3MTM5eWg4cA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
               <a class="social-pill" href="https://www.linkedin.com/company/straat-africa/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -87,7 +106,7 @@
             </div>
           </div>
 
-          <!-- Map image (replace if you like) -->
+          <!-- Map image -->
           <figure class="mt-10 rounded-lg overflow-hidden border 10 bg-white/5">
             <img src="assets/img/map.png" alt="Map" class="w-full h-56 object-cover">
           </figure>
@@ -98,35 +117,48 @@
           <form id="contactForm" class="grid gap-5">
             <div>
               <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Full Name</label>
-              <input type="text" name="name" required class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Your name">
+              <input type="text" name="name" required
+                     class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow"
+                     placeholder="Your name">
             </div>
 
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Email</label>
-                <input type="email" name="email" required class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="you@example.com">
+                <input type="email" name="email" required
+                       class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow"
+                       placeholder="you@example.com">
               </div>
               <div>
                 <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Phone</label>
-                <input type="tel" name="phone" class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="+27 …">
+                <input type="tel" name="phone"
+                       class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow"
+                       placeholder="+27 …">
               </div>
             </div>
 
             <div>
               <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Subject</label>
-              <input type="text" name="subject" class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Campaign brief / Partnership / Other">
+              <input type="text" name="subject"
+                     class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow"
+                     placeholder="Campaign brief / Partnership / Other">
             </div>
 
             <div>
               <label class="block text-xs font-extrabold uppercase tracking-widest text-white/70 mb-2">Message</label>
-              <textarea name="message" rows="6" required class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow" placeholder="Tell us about your project…"></textarea>
+              <textarea name="message" rows="6" required
+                        class="w-full rounded-lg bg-black/40 border 15 px-4 py-3 outline-none focus:border-brand-yellow"
+                        placeholder="Tell us about your project…"></textarea>
             </div>
 
-            <button type="submit" class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-extrabold uppercase tracking-widest bg-brand-yellow text-black hover:brightness-95">
+            <button type="submit"
+                    class="inline-flex items-center justify-center px-6 py-3 rounded-lg font-extrabold uppercase tracking-widest bg-brand-yellow text-black hover:brightness-95">
               Send Message
             </button>
 
-            <p class="text-xs text-white/50">By submitting, you agree that we may contact you regarding this enquiry.</p>
+            <p class="text-xs text-white/50">
+              By submitting, you agree that we may contact you regarding this enquiry.
+            </p>
           </form>
         </div>
       </div>
@@ -134,9 +166,15 @@
 
     <!-- PROUDLY -->
     <section class="text-center px-4 sm:px-6 py-16 md:py-20 bg-brand-black">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">PROUDLY AFRICAN.<br/>PROUDLY LOCAL.</h2>
-      <p class="mt-3 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">WE'RE BORN OF THE STREETS WE ADVERTISE IN</p>
-      <p class="mt-3 text-white/85 md:text-base max-w-2xl mx-auto">We're young, creative South Africans who understand the culture, the commute, and the consumer.</p>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+        PROUDLY AFRICAN.<br/>PROUDLY LOCAL.
+      </h2>
+      <p class="mt-3 text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">
+        WE'RE BORN OF THE STREETS WE ADVERTISE IN
+      </p>
+      <p class="mt-3 text-white/85 md:text-base max-w-2xl mx-auto">
+        We're young, creative South Africans who understand the culture, the commute, and the consumer.
+      </p>
     </section>
 
     <!-- PARALLAX -->
@@ -181,14 +219,17 @@
         </ul>
       </div>
     </div>
-    <div class="text-center text-xs text-white/50 py-6 border-t 10">©2025 Straat Africa. All Rights Reserved.</div>
+    <div class="text-center text-xs text-white/50 py-6 border-t 10">
+      ©2025 Straat Africa. All Rights Reserved.
+    </div>
   </footer>
 
   <script>
-    const t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
-    if(t&&m) t.addEventListener('click',()=>m.classList.toggle('hidden'));
+    const t = document.getElementById('navToggle'),
+          m = document.getElementById('navMenu');
+    if (t && m) t.addEventListener('click', () => m.classList.toggle('hidden'));
 
-    // Lightweight mailto handler
+    // mailto handler
     document.getElementById('contactForm')?.addEventListener('submit', function(e){
       e.preventDefault();
       const data = new FormData(this);
@@ -200,10 +241,7 @@
     });
   </script>
 
-
-<!-- ADD THIS: loader + animations -->
-<script src="assets/main.js"></script>
-<!-- Optional fallback: reveal body if main.js can’t load -->
-<script>setTimeout(()=>document.body.classList.add('is-loaded'),1000);</script>
+  <script src="assets/main.js"></script>
+  <script>setTimeout(()=>document.body.classList.add('is-loaded'),1000);</script>
 </body>
 </html>

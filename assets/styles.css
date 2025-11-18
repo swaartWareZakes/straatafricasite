@@ -94,17 +94,36 @@ body.is-loaded{
   filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
 }
 
-/* two “broken line” blocks like the design */
-.stripe-1{ top:-15%; }
-.stripe-2{ top:69%; }
+/* --- Default: mobile-first positions --- */
+.stripe-1{ top:4%; }      /* a bit down so it's visible on short phones   */
+.stripe-2{ top:58%; }     /* second block in the middle-ish on phones     }
 
-@media (max-width:768px){
-  .hero-stripes{ width:80px; }
+/* --- Tablets (768–1023px) --- */
+@media (min-width:768px){
+  .hero-stripes{ width:100px; }
+
   .stripe{
-    left:12px;
-    width:40px;
-    height:150px;
+    left:14px;
+    width:50px;
+    height:190px;
   }
+
+  .stripe-1{ top:-6%; }   /* slide slightly up, closer to the design      */
+  .stripe-2{ top:64%; }
+}
+
+/* --- Desktop (1024px+) – your tuned values (-11 and 69) --- */
+@media (min-width:1024px){
+  .hero-stripes{ width:120px; }
+
+  .stripe{
+    left:18px;
+    width:60px;
+    height:220px;
+  }
+
+  .stripe-1{ top:-11%; }  /* match the console-tuned desktop look         */
+  .stripe-2{ top:69%; }
 }
 /* === Parallax CTA (asphalt) — used on index/why/contact === */
 .parallax-cta{
