@@ -1,32 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us — Straat Africa</title>
-  <meta name="description" content="Breaking the mold in township & urban media solutions." />
-  <link rel="icon" href="/favicon.ico" />
-
-  <link rel="preload" href="assets/Montserrat-Black.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="assets/Montserrat-Bold.ttf"  as="font" type="font/ttf" crossorigin>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { brand: { yellow: '#F9CD46', black: '#0b0b0b', gray: '#121212' } },
-          fontFamily: { mont: ['"MontserratVar"','Montserrat','ui-sans-serif','system-ui'] },
-          boxShadow: { soft: '0 10px 30px rgba(0,0,0,.25)' },
-          maxWidth: { content: '1600px' }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <title>Straat Africa — Contact Us</title>
+    <meta name="description" content="Get in touch with Straat Africa — leaders in Media in Motion. Let’s connect your brand to South Africa’s streets, culture, and commuters." />
+  
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.straatafrica.com/contact.html" />
+  
+    <!-- Favicons & PWA Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#F9CD46" />
+    <meta name="theme-color" content="#0b0b0b" />
+  
+    <!-- Open Graph / LinkedIn / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Straat Africa" />
+    <meta property="og:title" content="About Straat Africa — Media in Motion" />
+    <meta property="og:description" content="Talk to Straat Africa. We deliver innovative, culture-first Media in Motion through taxis, streets, commuters and real-world touchpoints." />
+    <meta property="og:url" content="https://www.straatafrica.com/contact.html" />
+    <!-- <meta property="og:image" content="https://www.straatafrica.com/assets/img/og-contact.jpg" />  -->
+    <!-- (You can create og-contact.jpg or reuse hero image) -->
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Straat Africa — Media in Motion" />
+    <meta name="twitter:description" content="Reach out to Straat Africa to collaborate on impactful, street-level advertising and brand experiences." />
+    <!-- <meta name="twitter:image" content="https://www.straatafrica.com/assets/img/og-contact.jpg" /> -->
+  
+    <!-- Preload Fonts -->
+    <link rel="preload" href="assets/Montserrat-Black.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/Montserrat-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { yellow: '#F9CD46', black: '#0b0b0b', gray: '#121212' } },
+            fontFamily: { mont: ['"MontserratVar"','Montserrat','ui-sans-serif','system-ui'] },
+            boxShadow: { soft: '0 10px 30px rgba(0,0,0,.25)' },
+            maxWidth: { content: '1600px' }
+          }
         }
       }
-    }
-  </script>
+    </script>
+  
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/styles.css" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-  <link rel="stylesheet" href="assets/styles.css" />
-</head>
+    <style>
+      /* ABOUT page hero – keep full 1080x466 image visible on desktop */
+      @media (min-width: 1024px) {
+        .hero--about{
+          /* override global .hero height */
+          height: auto;
+          min-height: 0;
+          max-height: none;
+  
+          /* keep the same shape as the supplied 1080x466 asset */
+          aspect-ratio: 1080 / 466;
+  
+          /* keep normal hero behaviour */
+          background-position: center top;
+          background-size: contain;      /* no cropping now because ratio matches */
+          background-repeat: no-repeat;
+          background-color: #000;      /* fill behind if needed */
+        }
+      }
+    </style>
+  </head>
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
   <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
@@ -92,7 +142,9 @@
 
     <!-- SERVICES: stacked rows -->
     <section class="max-w-content mx-auto px-3 sm:px-6 pt-10 md:pt-12 pb-8 md:pb-12">
-      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">OUR SERVICES</h2>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+        OUR SERV<span class="text-brand-yellow">I</span>CES
+      </h2>
       <p class="mt-2 text-white/70 text-[12px] sm:text-sm md:text-base max-w-3xl">
         Leading the charge with South Africa’s widest reach of in-taxi TV screens, we also specialise in a diverse
         range of media solutions designed to reach South Africa’s dynamic audiences.
@@ -113,7 +165,7 @@
         <!-- 2 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
           <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
-            <img src="assets/img/about2.jpeg" alt="Traditional OOH" class="w-full h-full object-cover aspect-video" />
+            <img src="assets/img/about.jpeg" alt="Traditional OOH" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
             <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Traditional Out of Home</p>
@@ -124,7 +176,7 @@
         <!-- 3 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
           <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
-            <img src="assets/img/about4.jpeg" alt="Activations" class="w-full h-full object-cover aspect-video" />
+            <img src="assets/img/about2.jpeg" alt="Activations" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
             <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Activations</p>
@@ -135,7 +187,7 @@
         <!-- 4 -->
         <div class="flex flex-col md:flex-row md:items-start gap-6">
           <figure class="w-full md:w-[520px] overflow-hidden rounded-lg border 10 bg-white/5">
-            <img src="assets/img/about.jpg" alt="Urban Media" class="w-full h-full object-cover aspect-video" />
+            <img src="assets/img/about4.jpeg" alt="Urban Media" class="w-full h-full object-cover aspect-video" />
           </figure>
           <div class="md:flex-1">
             <p class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow">Urban Media</p>
