@@ -72,27 +72,40 @@ body.is-loaded{
 .hero--about  { background-image: url('img/abt.jpg'); }
 .hero--why    { background-image: url('img/why.jpg'); }
 .hero--contact{ background-image: url('img/cont.png'); }
-/* Optional variants */
-.hero--about{ background-image: url('img/about.jpg'); }
-.hero--why{ background-image: url('img/why.jpg'); }
 
-/* === LEFT STRIPES === */
+/* === LEFT STRIPES (road markings) === */
 .hero-stripes{
-  position:absolute; inset:0 auto 0 0; width:110px; pointer-events:none;
+  position:absolute;
+  inset:0 auto 0 0;
+  width:120px;
+  pointer-events:none;
+  z-index:1;
 }
+
 .stripe{
-  position:absolute; left:18px; width:60px; height:180px;
+  position:absolute;
+  left:18px;
+  width:60px;
+  height:220px;
   background-image:url('img/strip_texture.png');
-  background-size:cover; background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
   filter: drop-shadow(0 6px 12px rgba(0,0,0,.35));
 }
-.stripe-1{ top:12%; }
-.stripe-2{ bottom:12%; }
+
+/* two “broken line” blocks like the design */
+.stripe-1{ top:-15%; }
+.stripe-2{ top:69%; }
+
 @media (max-width:768px){
   .hero-stripes{ width:80px; }
-  .stripe{ left:12px; width:40px; height:120px; }
+  .stripe{
+    left:12px;
+    width:40px;
+    height:150px;
+  }
 }
-
 /* === Parallax CTA (asphalt) — used on index/why/contact === */
 .parallax-cta{
   position:relative;
