@@ -79,7 +79,7 @@ body.is-loaded{
 
 /* Per-page hero backgrounds */
 .hero--home   { background-image: url('img/bg.jpg'); }
-.hero--about  { background-image: url('img/abt.jpg'); }
+.hero--about  { background-image: url('img/newabt.jpeg'); }
 .hero--why    { background-image: url('img/why.jpg'); }
 .hero--contact{ background-image: url('img/cont.png'); }
 
