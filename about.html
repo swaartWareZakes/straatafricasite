@@ -55,24 +55,29 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="assets/styles.css" />
-
     <style>
-      /* ABOUT page hero – keep full 1080x466 image visible on desktop */
-      @media (min-width: 1024px) {
+      /* ABOUT page hero – always show full 1080x466 image, no cropping */
+      .hero--about{
+        /* cancel the global .hero fixed height */
+        height: auto;
+        min-height: 0;
+        max-height: none;
+    
+        /* keep the original image proportions */
+        aspect-ratio: 1080 / 466;
+    
+        /* show the whole image instead of cropping */
+        background-position: center top;
+        background-size: contain;   /* key: no side cut-off */
+        background-repeat: no-repeat;
+        background-color: #000;     /* black bars if needed on tall screens */
+      }
+    
+      /* Optional: on large desktop you can let it grow a bit taller if you want */
+      @media (min-width: 1280px){
         .hero--about{
-          /* override global .hero height */
-          height: auto;
-          min-height: 0;
-          max-height: none;
-  
-          /* keep the same shape as the supplied 1080x466 asset */
-          aspect-ratio: 1080 / 466;
-  
-          /* keep normal hero behaviour */
-          background-position: center top;
-          background-size: contain;      /* no cropping now because ratio matches */
-          background-repeat: no-repeat;
-          background-color: #000;      /* fill behind if needed */
+          max-width: 1600px;
+          margin-inline: auto;
         }
       }
     </style>
