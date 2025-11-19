@@ -81,7 +81,7 @@ body.is-loaded{
 .hero--home   { background-image: url('img/bg.jpg'); }
 .hero--about  { background-image: url('img/newabt.jpeg'); }
 .hero--why    { background-image: url('img/why.jpg'); }
-.hero--contact{ background-image: url('img/cont.png'); }
+.hero--contact{ background-image: url('img/contact.jpeg'); }
 
 /* === LEFT STRIPES (road markings) === */
 .hero-stripes{
