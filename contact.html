@@ -55,6 +55,41 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="assets/styles.css" />
+
+    <style>
+      /* CONTACT page hero
+         - Mobile/tablet: show full banner, no cropping (like ABOUT)
+         - Desktop (≥1024px): fixed 643px tall header
+      */
+
+      /* Base: mobile / tablet – no crop, keep full image */
+      .hero--contact {
+        height: auto;
+        min-height: 0;
+        max-height: none;
+
+        /* use the image’s ratio – adjust if your contact image differs */
+        aspect-ratio: 1080 / 466;
+
+        background-position: center top;
+        background-size: contain;   /* show whole image */
+        background-repeat: no-repeat;
+        background-color: #000;     /* black behind if there’s extra space */
+      }
+
+      /* Desktop: lock height to 643px */
+      @media (min-width: 1024px) {
+        .hero--contact {
+          height: 643px;
+          min-height: 643px;
+          max-height: 643px;
+
+          /* fill the strip nicely at this height */
+          background-size: cover;
+          background-position: center top;
+        }
+      }
+    </style>
   </head>
 
 <body class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black">
