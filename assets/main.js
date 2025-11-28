@@ -273,6 +273,83 @@
                 title: p.name || p.rank || "Straat Africa Taxi",
                 icon: taxiIcon,
           });
+
+                    // After the markers have been added
+          fetch('assets/data/straatafrica-routes.json')
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function (routes) {
+            if (!Array.isArray(routes) || !routes.length) return;
+
+            routes.forEach(function (r) {
+              if (
+                typeof r.startLat !== "number" ||
+                typeof r.startLng !== "number" ||
+                typeof r.endLat !== "number" ||
+                typeof r.endLng !== "number"
+              ) {
+                return;
+              }
+
+              // Optional: work out a simple numeric loads-per-day
+              var loadsNum = 0;
+              if (typeof r.loadsPerDay === "string") {
+                var m = r.loadsPerDay.match(/(\d+)/);
+                if (m) loadsNum = parseInt(m[1], 10);
+              }
+
+              // Thicker line for higher loads
+              var weight = 2;
+              if (loadsNum >= 8) weight = 4;
+              else if (loadsNum >= 6) weight = 3;
+
+              var polyline = new google.maps.Polyline({
+                path: [
+                  { lat: r.startLat, lng: r.startLng },
+                  { lat: r.endLat, lng: r.endLng },
+                ],
+                map: map,
+                strokeColor: "#F9CD46",        // brand yellow
+                strokeOpacity: 0.65,
+                strokeWeight: weight,
+              });
+
+              // Optional: small tooltip on click
+              var info = new google.maps.InfoWindow({
+                content:
+                  '<div style="min-width:220px;padding:8px 10px;'
+                  + 'background:#0b0b0b;color:#fff;border-radius:8px;'
+                  + 'font-family:Montserrat,system-ui,sans-serif;">'
+                  + '<div style="font-size:10px;letter-spacing:.16em;'
+                  + 'text-transform:uppercase;font-weight:800;color:#F9CD46;'
+                  + 'margin-bottom:4px;">Route</div>'
+                  + '<div style="font-size:13px;font-weight:700;">'
+                  + (r.startName || 'Start') + ' → ' + (r.endName || 'End')
+                  + '</div>'
+                  + (r.district
+                      ? '<div style="font-size:11px;opacity:.8;margin-top:2px;">'
+                          + r.district + (r.state ? ', ' + r.state : '')
+                        + '</div>'
+                      : '')
+                  + (r.loadsPerDay
+                      ? '<div style="font-size:11px;opacity:.8;margin-top:4px;">'
+                          + 'Loads: ' + r.loadsPerDay
+                        + '</div>'
+                      : '')
+                  + '</div>',
+              });
+
+              polyline.addListener("click", function (e) {
+                info.setPosition(e.latLng);
+                info.open(map);
+              });
+            });
+          })
+          .catch(function (err) {
+            console.error("Failed to load Straat Africa routes JSON", err);
+          });
+
           
 
           var infoHtml =
