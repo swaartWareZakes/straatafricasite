@@ -1,0 +1,232 @@
+[
+  {
+    "id": "Invetory_1",
+    "name": "CS 44 GV ZN - Taxi 1",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.812,
+    "lng": 30.8039
+  },
+  {
+    "id": "Invetory_2",
+    "name": "BB 65 DH ZN - Taxi 14",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.8283,
+    "lng": 30.9944
+  },
+  {
+    "id": "Invetory_3",
+    "name": "BY 84 WG ZN - Taxi 32",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.847,
+    "lng": 31.002
+  },
+  {
+    "id": "Invetory_4",
+    "name": "CK 97 JN ZN- Taxi 23",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.812,
+    "lng": 30.8039
+  },
+  {
+    "id": "Invetory_7",
+    "name": "CN 13 JG ZN- Taxi 21",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.8587,
+    "lng": 31.0218
+  },
+  {
+    "id": "Invetory_8",
+    "name": "ND 250-536- Taxi 38",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.8283,
+    "lng": 30.8039
+  },
+  {
+    "id": "Invetory_9",
+    "name": "BF 96 JP ZN- Taxi 18",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.8283,
+    "lng": 30.8039
+  },
+  {
+    "id": "Invetory_10",
+    "name": "CR 09 VX ZN- Taxi 22",
+    "rank": "Ethekwini Municipality",
+    "city": "KZN",
+    "route": null,
+    "screens": 1,
+    "lat": -29.8587,
+    "lng": 31.0218
+  },
+  {
+    "id": "Invetory_22",
+    "name": "KB 52 HL GP- Taxi 15",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.0213,
+    "lng": 27.929
+  },
+  {
+    "id": "Invetory_23",
+    "name": "HJ 54 WH GP- Taxi 16",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.0255,
+    "lng": 28.004
+  },
+  {
+    "id": "Invetory_24",
+    "name": "LB 15 YW GP- Taxi 17",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.0255,
+    "lng": 28.004
+  },
+  {
+    "id": "Invetory_25",
+    "name": "LB 15 YD GP- Taxi 18",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.20132,
+    "lng": 28.035591
+  },
+  {
+    "id": "Invetory_26",
+    "name": "HM 63 MF GP- Taxi 19",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -25.9424,
+    "lng": 28.0201
+  },
+  {
+    "id": "Invetory_27",
+    "name": "KB 52 JB GP- Taxi 20",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.0792,
+    "lng": 27.9256
+  },
+  {
+    "id": "Invetory_28",
+    "name": "KB 52 HW GP- Taxi 21",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.2041,
+    "lng": 28.0473
+  },
+  {
+    "id": "Invetory_29",
+    "name": "HM 63 LW GP- Taxi 22",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.0792,
+    "lng": 27.9256
+  },
+  {
+    "id": "Invetory_30",
+    "name": "KB 52 HD GP- Taxi 23",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.2041,
+    "lng": 28.0473
+  },
+  {
+    "id": "Invetory_31",
+    "name": "KH 62 FY GP- Taxi 24",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -25.9424,
+    "lng": 28.0201
+  },
+  {
+    "id": "Invetory_32",
+    "name": "HM 63 LD GP- Taxi 25",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -25.9424,
+    "lng": 28.0201
+  },
+  {
+    "id": "Invetory_33",
+    "name": "KM 27 HS GP- Taxi  3",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.2041,
+    "lng": 28.0473
+  },
+  {
+    "id": "Invetory_34",
+    "name": "LB 16 BL GP- Taxi 10",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -26.2041,
+    "lng": 28.0473
+  },
+  {
+    "id": "Invetory_35",
+    "name": "HX 26 DF GP- Taxi 28",
+    "rank": "City of Johannesburg",
+    "city": "Gauteng",
+    "route": null,
+    "screens": 1,
+    "lat": -25.9424,
+    "lng": 28.0201
+  },
+  {
+    "id": "Invetory_37",
+    "name": "KJY 790 EC -Taxi 60",
+    "rank": "King sebata dalindyebo(Mthata)",
+    "city": "Eastern Cape",
+    "route": null,
+    "screens": 1,
+    "lat": -31.5882,
+    "lng": 28.7844
+  }
+]

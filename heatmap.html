@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Straat Africa — Network Map</title>
+    <meta
+      name="description"
+      content="Explore Straat Africa’s live taxi screen network. See where our screens are installed and how far our media in motion truly reaches."
+    />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.straatafrica.com/network.html" />
+
+    <!-- Favicons & PWA Icons (same as other pages) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#F9CD46" />
+    <meta name="theme-color" content="#0b0b0b" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Straat Africa" />
+    <meta property="og:title" content="Straat Africa — Network Map" />
+    <meta
+      property="og:description"
+      content="See Straat Africa’s in-taxi screen network on a live coverage map."
+    />
+    <meta property="og:url" content="https://www.straatafrica.com/network.html" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Straat Africa — Network Map" />
+    <meta
+      name="twitter:description"
+      content="See Straat Africa’s in-taxi screen network on a live coverage map."
+    />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="assets/Montserrat-Black.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/Montserrat-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { yellow: "#F9CD46", black: "#0b0b0b", gray: "#121212" } },
+            fontFamily: {
+              mont: ['"MontserratVar"', "Montserrat", "ui-sans-serif", "system-ui"],
+            },
+            boxShadow: { soft: "0 10px 30px rgba(0,0,0,.25)" },
+            maxWidth: { content: "1600px" },
+          },
+        },
+      };
+    </script>
+
+    <!-- Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+
+  <body
+    class="bg-brand-black text-white font-mont antialiased selection:bg-brand-yellow selection:text-black"
+  >
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+      <div class="loader-wrap">
+        <div class="loader-ring"></div>
+        <div class="loader-word">LOADING</div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-white/10">
+      <div
+        class="max-w-content mx-auto px-3 sm:px-6 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/img/logo.png" alt="Straat Africa" class="h-16 md:h-24 w-auto" />
+        </a>
+
+        <!-- Mobile burger / close -->
+        <button
+          id="navToggle"
+          class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded border border-white/20 text-white transition"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span id="navIcon" class="text-xl leading-none">☰</span>
+        </button>
+
+        <!-- Desktop nav -->
+        <nav
+          class="hidden md:flex gap-7 text-xs tracking-widest font-extrabold uppercase"
+        >
+          <a class="transition hover:text-brand-yellow" href="index.html">Home</a>
+          <a class="transition hover:text-brand-yellow" href="about.html">About Us</a>
+          <a class="transition hover:text-brand-yellow" href="why-us.html">Why Us</a>
+          <a class="transition hover:text-brand-yellow" href="contact.html">Contact</a>
+          <a class="transition text-brand-yellow" href="heatmap.html">Heat Map</a>
+        </nav>
+      </div>
+
+      <!-- Mobile nav panel -->
+      <nav
+        id="navMenu"
+        class="mobile-nav md:hidden bg-black/95 border-t border-white/10"
+      >
+        <div
+          class="max-w-content mx-auto px-3 sm:px-6 py-4 flex flex-col gap-3 text-sm font-extrabold tracking-widest uppercase"
+        >
+          <a class="py-1 hover:text-brand-yellow" href="index.html">Home</a>
+          <a class="py-1 hover:text-brand-yellow" href="about.html">About Us</a>
+          <a class="py-1 hover:text-brand-yellow" href="why-us.html">Why Us</a>
+          <a class="py-1 hover:text-brand-yellow" href="contact.html">Contact</a>
+          <a class="py-1 text-brand-yellow" href="heatmap.html">Heat Map</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero hero--network relative">
+        <div class="hero-stripes">
+          <span class="stripe stripe-1"></span>
+          <span class="stripe stripe-2"></span>
+        </div>
+        <div class="absolute inset-0 bg-black/35"></div>
+
+        <div
+          class="relative z-10 max-w-content mx-auto px-3 sm:px-6 h-full flex items-center"
+        >
+          <div class="max-w-xl space-y-4" data-animate="fade-up">
+            <p
+              class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow"
+            >
+              LIVE COVERAGE
+            </p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+              OUR NETWORK <span class="text-brand-yellow">MAP</span>
+            </h1>
+            <p class="text-white/90 md:text-lg">
+              Explore Straat Africa’s in-taxi screen footprint. Every pin shows a taxi rank
+              or route where our Media in Motion runs daily.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SNAPSHOT / LEGEND / HOW-TO CARDS ABOVE MAP -->
+      <section class="bg-brand-gray py-14 md:py-18">
+        <div class="max-w-6xl mx-auto px-4 lg:px-8 space-y-10">
+          <header class="text-center space-y-3 max-w-3xl mx-auto">
+            <p
+              class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] text-brand-yellow"
+            >
+              LIVE COVERAGE MAP
+            </p>
+            <h2 class="text-3xl md:text-4xl font-extrabold">
+              Live Screen Locations
+            </h2>
+            <p class="text-sm md:text-base text-white/80">
+              Use these cards to quickly explain what the map is showing before you zoom in
+              to specific corridors in client sessions.
+            </p>
+          </header>
+
+          <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm">
+            <!-- NETWORK SNAPSHOT -->
+            <div
+              class="rounded-2xl bg-black/80 border border-white/10 px-4 sm:px-5 py-5 space-y-4 shadow-soft"
+            >
+              <p
+                class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.22em] text-brand-yellow"
+              >
+                NETWORK SNAPSHOT
+              </p>
+              <p class="text-white/80 text-sm">
+                A quick glance at how many taxis, ranks and cities are currently active in
+                the Straat Africa network.
+              </p>
+
+              <div class="space-y-3 text-white/90">
+                <div class="flex items-center justify-between gap-3">
+                  <span
+                    class="font-extrabold tracking-[0.18em] uppercase text-[10px] text-white/60"
+                    >Total taxis</span
+                  >
+                  <span
+                    id="statTotalTaxis"
+                    class="text-lg sm:text-xl font-extrabold text-white"
+                    >–</span
+                  >
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                  <span
+                    class="font-extrabold tracking-[0.18em] uppercase text-[10px] text-white/60"
+                    >Total ranks</span
+                  >
+                  <span
+                    id="statTotalRanks"
+                    class="text-lg sm:text-xl font-extrabold text-white"
+                    >–</span
+                  >
+                </div>
+                <div class="flex items-center justify-between gap-3">
+                  <span
+                    class="font-extrabold tracking-[0.18em] uppercase text-[10px] text-white/60"
+                    >Cities / towns</span
+                  >
+                  <span
+                    id="statTotalCities"
+                    class="text-lg sm:text-xl font-extrabold text-white"
+                    >–</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- LEGEND -->
+            <div
+              class="rounded-2xl bg-black/80 border border-white/10 px-4 sm:px-5 py-5 space-y-4 shadow-soft"
+            >
+              <p
+                class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.22em] text-brand-yellow"
+              >
+                LEGEND
+              </p>
+
+              <div class="space-y-2 text-white/85">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="inline-block w-3 h-3 rounded-full"
+                    style="background:#F9CD46;"
+                  ></span>
+                  <span>Taxi with 1–3 screens</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="inline-block w-3 h-3 rounded-full"
+                    style="background:#ff9f1c;"
+                  ></span>
+                  <span>Taxi with 4–7 screens</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span
+                    class="inline-block w-3 h-3 rounded-full"
+                    style="background:#ff4040;"
+                  ></span>
+                  <span>Taxi with 8+ screens</span>
+                </div>
+              </div>
+
+              <p class="mt-1 text-[11px] text-white/60">
+                Screen counts are based on live Straat Africa device inventory per taxi and
+                update as more screens come online.
+              </p>
+            </div>
+
+            <!-- HOW TO USE THIS MAP -->
+            <div
+              class="rounded-2xl bg-gradient-to-br from-brand-yellow/15 via-brand-yellow/5 to-transparent border border-brand-yellow/40 px-4 sm:px-5 py-5 space-y-3 shadow-soft"
+            >
+              <p
+                class="font-extrabold text-[11px] tracking-[0.18em] uppercase text-brand-yellow"
+              >
+                HOW TO USE THIS MAP
+              </p>
+              <ul class="space-y-1.5 list-disc list-inside text-white/85">
+                <li>Zoom into specific corridors to show granular coverage.</li>
+                <li>Screenshot regions for client decks and proposals.</li>
+                <li>
+                  Combine with campaign data to report on reach, frequency and
+                  high-performing routes.
+                </li>
+              </ul>
+              <p class="text-[11px] text-white/60">
+                Tip: keep this page open during presentations and move between regions as
+                you talk through the media plan.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FULL-WIDTH NETWORK MAP -->
+      <section class="bg-brand-black">
+        <div class="max-w-content mx-auto px-0 sm:px-0">
+          <!-- Map header bar (no counts now, counts live in cards above) -->
+          <div class="border-y border-white/10 bg-black/80">
+            <div
+              class="flex flex-wrap items-center justify-between gap-4 px-4 sm:px-6 py-3"
+            >
+              <div>
+                <p
+                  class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] text-brand-yellow"
+                >
+                  NETWORK VIEW
+                </p>
+                <p class="text-xs sm:text-sm text-white/75">
+                  Pan &amp; zoom to explore coverage per province and corridor. Click a
+                  taxi icon to see rank, city and screen count.
+                </p>
+              </div>
+            </div>
+
+            <!-- The map itself – stretched to content width -->
+            <div id="straatMap" class="w-full h-[70vh] md:h-[80vh] bg-black/40"></div>
+
+            <div
+              class="px-4 sm:px-6 py-3 border-t border-white/10 text-[11px] text-white/55"
+            >
+              * Location markers and counts are updated as new taxis and ranks are
+              activated in the Straat Africa network. Icon size is illustrative and does
+              not represent exact vehicle scale.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BELOW-MAP INFO STRIP + CTA -->
+      <section class="bg-brand-black py-14 md:py-18">
+        <div class="max-w-6xl mx-auto px-4 lg:px-8 space-y-10">
+          <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm">
+            <div
+              class="rounded-2xl bg-black/70 border border-white/10 p-5 space-y-2"
+            >
+              <p
+                class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.22em] text-brand-yellow"
+              >
+                PROVINCES COVERED
+              </p>
+              <p class="text-white/85">
+                Current live coverage across Gauteng, KwaZulu-Natal and Eastern Cape,
+                with additional corridors in planning for Limpopo and the Western Cape.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl bg-black/70 border border-white/10 p-5 space-y-2"
+            >
+              <p
+                class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.22em] text-brand-yellow"
+              >
+                TYPICAL COMMUTE ROUTES
+              </p>
+              <p class="text-white/85">
+                High-frequency routes link townships, CBDs, taxi ranks and retail nodes –
+                the same corridors your target shoppers travel every day.
+              </p>
+            </div>
+            <div
+              class="rounded-2xl bg-black/70 border border-white/10 p-5 space-y-2"
+            >
+              <p
+                class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.22em] text-brand-yellow"
+              >
+                DATA SOURCE
+              </p>
+              <p class="text-white/85">
+                This map is powered by Straat Africa&apos;s internal device inventory:
+                each point is a registered taxi with a screen installed and verified GPS
+                coordinates.
+              </p>
+            </div>
+          </div>
+
+          <!-- Soft CTA -->
+          <div class="text-center space-y-3">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+              Media in motion.<br class="hidden sm:block" />
+              <span class="text-brand-yellow">Coverage your clients can see.</span>
+            </h2>
+            <p
+              class="mt-1 text-sm md:text-base text-white/75 max-w-2xl mx-auto"
+            >
+              Use this map in your next client presentation to anchor the story: which
+              cities you covered, which corridors you owned, and how Straat Africa reached
+              commuters on the move.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER – copy from other pages -->
+    <footer id="contact" class="bg-brand-gray border-t border-white/10">
+      <div
+        class="max-w-content mx-auto px-3 sm:px-6 py-10 grid md:grid-cols-3 gap-8"
+      >
+        <div>
+          <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">
+            Links
+          </h4>
+          <ul class="mt-3 space-y-2 text-white/80">
+            <li>
+              <a class="hover:text-brand-yellow" href="index.html#what-we-do"
+                >What We Do</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-brand-yellow" href="index.html#clients"
+                >Clients</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-brand-yellow" href="index.html#partners"
+                >Partners</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">
+            Company
+          </h4>
+          <ul class="mt-3 space-y-2 text-white/80">
+            <li><a class="hover:text-brand-yellow" href="about.html">About Us</a></li>
+            <li><a class="hover:text-brand-yellow" href="why-us.html">Why Us</a></li>
+            <li>
+              <a class="hover:text-brand-yellow" href="network.html">Network Map</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white/90 uppercase tracking-widest text-sm">
+            Contact
+          </h4>
+          <ul class="mt-3 space-y-2 text-white/80">
+            <li>heita@straatafrica.com</li>
+            <li>www.straatafrica.com</li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="text-center text-xs text-white/50 py-6 border-t border-white/10"
+      >
+        ©2025 Straat Africa. All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- Core JS -->
+    <script src="assets/main.js"></script>
+    <!-- Safety: reveal if something weird happens -->
+    <script>
+      setTimeout(() => document.body.classList.add("is-loaded"), 1000);
+    </script>
+
+    <!-- Google Maps -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw_8VJbKsa-Fc3ZJ0rcAXMP0Wtgyy24lw&callback=initStraatMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
