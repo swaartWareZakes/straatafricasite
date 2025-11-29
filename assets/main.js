@@ -362,10 +362,7 @@
           + 'text-transform:uppercase;font-weight:800;color:#F9CD46;'
           + 'margin-bottom:4px;">Straat Africa Taxi Screen</div>'
           +
-          '<h3 style="margin:0 0 4px;font-weight:800;font-size:14px;'
-          + 'color:#ffffff;">'
-          + (p.name || p.rank || 'Straat Africa Taxi')
-          + '</h3>'
+          
           +
           (p.rank
             ? '<div style="font-size:12px;opacity:.85;margin-bottom:2px;">'

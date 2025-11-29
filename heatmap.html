@@ -13,7 +13,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.straatafrica.com/network.html" />
 
-    <!-- Favicons & PWA Icons (same as other pages) -->
+    <!-- Favicons & PWA Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -141,7 +141,7 @@
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO (image only, like other pages) -->
       <section class="hero hero--network relative">
         <div class="hero-stripes">
           <span class="stripe stripe-1"></span>
@@ -150,43 +150,35 @@
         <div class="absolute inset-0 bg-black/35"></div>
 
         <div
-          class="relative z-10 max-w-content mx-auto px-3 sm:px-6 h-full flex items-center"
+          class="relative z-10 max-w-content mx-auto px-3 sm:px-6 h-full flex items-center justify-center"
         >
-          <div class="max-w-xl space-y-4" data-animate="fade-up">
-            <p
-              class="text-[10px] sm:text-xs font-extrabold uppercase tracking-widest text-brand-yellow"
-            >
-              LIVE COVERAGE
-            </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              OUR NETWORK <span class="text-brand-yellow">MAP</span>
-            </h1>
-            <p class="text-white/90 md:text-lg">
-              Explore Straat Africa’s in-taxi screen footprint. Every pin shows a taxi rank
-              or route where our Media in Motion runs daily.
-            </p>
-          </div>
+          <span class="sr-only">Straat Africa Network Map</span>
         </div>
       </section>
 
-      <!-- SNAPSHOT / LEGEND / HOW-TO CARDS ABOVE MAP -->
+      <!-- COPY + SNAPSHOT / LEGEND / HOW-TO CARDS -->
       <section class="bg-brand-gray py-14 md:py-18">
-        <div class="max-w-6xl mx-auto px-4 lg:px-8 space-y-10">
-          <header class="text-center space-y-3 max-w-3xl mx-auto">
-            <p
-              class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] text-brand-yellow"
+        <div class="max-w-content mx-auto px-3 sm:px-6 space-y-10">
+          <!-- Header copy same style as other pages -->
+          <header class="max-w-4xl">
+            <h1
+              class="text-[9vw] sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-[0.95]"
             >
-              LIVE COVERAGE MAP
+              NETWORK MAP
+            </h1>
+            <p
+              class="mt-4 text-[10px] sm:text-xs md:text-sm font-extrabold uppercase tracking-widest text-brand-yellow"
+            >
+              Visualising Straat Africa’s Media in Motion footprint
             </p>
-            <h2 class="text-3xl md:text-4xl font-extrabold">
-              Live Screen Locations
-            </h2>
-            <p class="text-sm md:text-base text-white/80">
-              Use these cards to quickly explain what the map is showing before you zoom in
-              to specific corridors in client sessions.
+            <p class="mt-3 md:mt-4 text-white/90 md:text-base max-w-3xl">
+              Explore Straat Africa’s in-taxi screen footprint across South Africa. Each
+              pin represents a taxi or rank where our Media in Motion runs along real
+              commuter routes — from townships to CBDs and retail nodes.
             </p>
           </header>
 
+          <!-- Cards: Snapshot + Legend + How To -->
           <div class="grid gap-6 md:grid-cols-3 text-xs sm:text-sm">
             <!-- NETWORK SNAPSHOT -->
             <div
@@ -198,7 +190,7 @@
                 NETWORK SNAPSHOT
               </p>
               <p class="text-white/80 text-sm">
-                A quick glance at how many taxis, ranks and cities are currently active in
+                A quick glance at how many taxis and provinces are currently active in
                 the Straat Africa network.
               </p>
 
@@ -217,24 +209,11 @@
                 <div class="flex items-center justify-between gap-3">
                   <span
                     class="font-extrabold tracking-[0.18em] uppercase text-[10px] text-white/60"
-                    >Total ranks</span
+                    >Total provinces</span
                   >
-                  <span
-                    id="statTotalRanks"
-                    class="text-lg sm:text-xl font-extrabold text-white"
-                    >–</span
-                  >
-                </div>
-                <div class="flex items-center justify-between gap-3">
-                  <span
-                    class="font-extrabold tracking-[0.18em] uppercase text-[10px] text-white/60"
-                    >Cities / towns</span
-                  >
-                  <span
-                    id="statTotalCities"
-                    class="text-lg sm:text-xl font-extrabold text-white"
-                    >–</span
-                  >
+                  <span class="text-lg sm:text-xl font-extrabold text-white">
+                    6
+                  </span>
                 </div>
               </div>
             </div>
@@ -274,8 +253,8 @@
               </div>
 
               <p class="mt-1 text-[11px] text-white/60">
-                Screen counts are based on live Straat Africa device inventory per taxi and
-                update as more screens come online.
+                Screen groupings are based on Straat Africa’s internal device inventory
+                and will evolve as new vehicles and corridors come online.
               </p>
             </div>
 
@@ -298,7 +277,7 @@
               </ul>
               <p class="text-[11px] text-white/60">
                 Tip: keep this page open during presentations and move between regions as
-                you talk through the media plan.
+                you talk through the media plan and flighting strategy.
               </p>
             </div>
           </div>
@@ -308,7 +287,6 @@
       <!-- FULL-WIDTH NETWORK MAP -->
       <section class="bg-brand-black">
         <div class="max-w-content mx-auto px-0 sm:px-0">
-          <!-- Map header bar (no counts now, counts live in cards above) -->
           <div class="border-y border-white/10 bg-black/80">
             <div
               class="flex flex-wrap items-center justify-between gap-4 px-4 sm:px-6 py-3"
@@ -321,20 +299,20 @@
                 </p>
                 <p class="text-xs sm:text-sm text-white/75">
                   Pan &amp; zoom to explore coverage per province and corridor. Click a
-                  taxi icon to see rank, city and screen count.
+                  taxi icon to see rank, city and screen context.
                 </p>
               </div>
             </div>
 
-            <!-- The map itself – stretched to content width -->
+            <!-- Map -->
             <div id="straatMap" class="w-full h-[70vh] md:h-[80vh] bg-black/40"></div>
 
             <div
               class="px-4 sm:px-6 py-3 border-t border-white/10 text-[11px] text-white/55"
             >
-              * Location markers and counts are updated as new taxis and ranks are
-              activated in the Straat Africa network. Icon size is illustrative and does
-              not represent exact vehicle scale.
+              * Location markers are updated as new taxis and ranks are activated in the
+              Straat Africa network. Icon size is illustrative and does not represent
+              exact vehicle scale.
             </div>
           </div>
         </div>
@@ -353,8 +331,8 @@
                 PROVINCES COVERED
               </p>
               <p class="text-white/85">
-                Current live coverage across Gauteng, KwaZulu-Natal and Eastern Cape,
-                with additional corridors in planning for Limpopo and the Western Cape.
+                Current live coverage across six South African provinces, with additional
+                corridors being added as the Straat Africa network expands.
               </p>
             </div>
             <div
@@ -392,37 +370,64 @@
               Media in motion.<br class="hidden sm:block" />
               <span class="text-brand-yellow">Coverage your clients can see.</span>
             </h2>
-            <p
-              class="mt-1 text-sm md:text-base text-white/75 max-w-2xl mx-auto"
-            >
+            <p class="mt-1 text-sm md:text-base text-white/75 max-w-2xl mx-auto">
               Use this map in your next client presentation to anchor the story: which
               cities you covered, which corridors you owned, and how Straat Africa reached
               commuters on the move.
             </p>
           </div>
-
-          
         </div>
       </section>
 
-        <!-- BIG PARALLAX SOCIAL -->
-    <section class="parallax-cta asphalt" data-animate="fade">
-      <div class="parallax-overlay"></div>
-      <div class="max-w-content mx-auto px-4 sm:px-6 relative z-[2] text-center flex flex-col items-center justify-center" style="min-height: 72vh;">
-        <div class="flex items-center justify-center gap-3 sm:gap-4">
-          <a class="social-pill" href="https://www.instagram.com/straatafrica?igsh=MXZjb3l3MTM5eWg4cA==" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a class="social-pill" href="https://www.linkedin.com/company/straat-africa/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a class="social-pill" href="https://www.facebook.com/share/1AGY8H21wd/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a class="social-pill" href="https://x.com/StraatAfrica?t=LICMg9hbkpXBf-_WLgOWfg&s=09" target="_blank" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <!-- BIG PARALLAX SOCIAL -->
+      <section class="parallax-cta asphalt" data-animate="fade">
+        <div class="parallax-overlay"></div>
+        <div
+          class="max-w-content mx-auto px-4 sm:px-6 relative z-[2] text-center flex flex-col items-center justify-center"
+          style="min-height: 72vh;"
+        >
+          <div class="flex items-center justify-center gap-3 sm:gap-4">
+            <a
+              class="social-pill"
+              href="https://www.instagram.com/straatafrica?igsh=MXZjb3l3MTM5eWg4cA=="
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              class="social-pill"
+              href="https://www.linkedin.com/company/straat-africa/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              class="social-pill"
+              href="https://www.facebook.com/share/1AGY8H21wd/"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              class="social-pill"
+              href="https://x.com/StraatAfrica?t=LICMg9hbkpXBf-_WLgOWfg&s=09"
+              target="_blank"
+              aria-label="X"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+          <p class="mt-8 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">
+            www.straatafrica.com
+          </p>
+          <p class="mt-2 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide">
+            heita@straatafrica.com
+          </p>
         </div>
-        <p class="mt-8 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">www.straatafrica.com</p>
-        <p class="mt-2 text-xl sm:text-2xl md:text-3xl font-extrabold tracking-wide">heita@straatafrica.com</p>
-      </div>
-      <div class="h-1 bg-brand-yellow w-full"></div>
-    </section>
+        <div class="h-1 bg-brand-yellow w-full"></div>
+      </section>
     </main>
 
-    <!-- FOOTER – copy from other pages -->
+    <!-- FOOTER -->
     <footer id="contact" class="bg-brand-gray border-t border-white/10">
       <div
         class="max-w-content mx-auto px-3 sm:px-6 py-10 grid md:grid-cols-3 gap-8"
@@ -480,7 +485,6 @@
 
     <!-- Core JS -->
     <script src="assets/main.js"></script>
-    <!-- Safety: reveal if something weird happens -->
     <script>
       setTimeout(() => document.body.classList.add("is-loaded"), 1000);
     </script>
